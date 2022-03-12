@@ -61,11 +61,11 @@ function toggleVisibleMyDB() {
 
 
 
-// personalMovieDB.count();
+personalMovieDB.count();
 personalMovieDB.movies();
-// personalMovieDB.genres();
-// personalMovieDB.privat();
-// toggleVisibleMyDB();
+personalMovieDB.genres();
+personalMovieDB.privat();
+toggleVisibleMyDB();
 
 
 
