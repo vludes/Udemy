@@ -10,7 +10,8 @@ let personalMovieDB = {
             numberOfFilms = +prompt('How many movies have you watched already?');
         };
     },
-    movies: function () {
+    movies: [],
+    moviesMethod: function () {
         for (let i = 0; i < 2; i++) {
             a = prompt("What movie did you watch?");
             b = prompt("How did you like it?");
@@ -26,17 +27,15 @@ let personalMovieDB = {
         console.log(personalMovieDB)
     },
     actors: {},
-    genres: function () {
-        let arr = []
+    genres: [],
+    genresMethod: function () {
         for (let i = 1; i <= 3; i++) {
             let input = prompt(`What is your favourite genre ${i}?`);
             if (input === null || input === '') {
                 i--;
             };
             personalMovieDB.genres[i - 1] = input;
-            arr.push(input);
             console.log(personalMovieDB);
-            console.log(arr);
         };
     },
     privat: function () {
@@ -62,8 +61,8 @@ function toggleVisibleMyDB() {
 
 
 personalMovieDB.count();
-personalMovieDB.movies();
-personalMovieDB.genres();
+personalMovieDB.moviesMethod();
+personalMovieDB.genresMethod();
 personalMovieDB.privat();
 toggleVisibleMyDB();
 
