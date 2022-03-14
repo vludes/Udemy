@@ -35,13 +35,25 @@ let personalMovieDB = {
                 i--;
             };
             personalMovieDB.genres[i - 1] = input;
-            console.log(personalMovieDB);
+            personalMovieDB.genres.forEach(function () {
+                console.log(`Favourite genre #${i} is ${input}`)
+            });
         };
+
     },
     privat: function () {
         privatStatus = prompt("Is it true?");
         privatBoolean = privatStatus.toLowerCase() == true ? true : false;
         personalMovieDB.privat = privatBoolean;
+    },
+    detectPersonalLevel: () => {
+        if (personalMovieDB.count < 10) {
+            console.log("You are a newbie")
+        } else if (personalMovieDB.count > 10 && personalMovieDB.count < 15) {
+            console.log("You are an average")
+        } else if (personalMovieDB.count > 15) {
+            console.log("You are a pro")
+        };
     }
 };
 
@@ -64,25 +76,19 @@ personalMovieDB.count();
 personalMovieDB.moviesMethod();
 personalMovieDB.genresMethod();
 personalMovieDB.privat();
+personalMovieDB.detectPersonalLevel();
 toggleVisibleMyDB();
 
 
 
-// function detectPersonalLevel() {
-//     if (personalMovieDB.count < 10) {
-//         console.log("You are a newbie")
-//     } else if (personalMovieDB.count > 10 && personalMovieDB.count < 15) {
-//         console.log("You are an average")
-//     } else {
-//         console.log("You are a pro")
-//     };
-// };
+
 
 
 
 // ----------------------------------------------------------------------------------------------
 
 // rememberMyFilms();
+
 
 // const Vludes = {
 //     age: 21,
@@ -93,6 +99,10 @@ toggleVisibleMyDB();
 //         sports: 'amateur'
 //     }
 // };
+
+// console.log(Object.values(Vludes));
+
+// console.log(Vludes[key]);
 
 // for (let key in Vludes) {
 //     if (typeof (Vludes[key]) === 'object') {
@@ -114,3 +124,26 @@ toggleVisibleMyDB();
 // const b = [6, 7, 8, 9];
 // const c = [...a, ...b, 'vk', 'fb'];
 // console.log(c);
+
+// let q = '15px'
+// console.log(parseInt(q));
+
+// let body = document.querySelector('body');
+// body.style.height = '100%';
+// let div = document.createElement('div');
+// div.classList.add('first');
+// div.style.width = '50%';
+// div.style.height = '150px';
+// div.style.textAlign = 'center';
+// div.style.lineHeight = '150px';
+// div.style.backgroundColor = 'rgb(123, 200, 150)';
+// document.body.append(div);
+// div.innerHTML = '<h1>Henlo</h1>'
+
+// let div2 = document.createElement('div');
+// div2.style.cssText = "width: 300px; height: 100px; background-color: pink;";
+// document.body.prepend(div2);
+
+// let div3 = document.createElement('div');
+// div3.style.cssText = "width: 500px; height: 100px; background-color: purple;";
+// div2.after(div3);
